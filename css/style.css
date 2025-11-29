@@ -97,7 +97,7 @@ nav a:hover {
 }
 
 .grena {
-    background-color: rgb(135, 10, 40);
+    background-color: rgb(1, 33, 105);
     width: 100%;
     height: 25px;
 }
@@ -401,4 +401,5 @@ footer .social-icons {
     .noticias-container {
         grid-template-columns: 1fr;
     }
+
 }
