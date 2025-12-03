@@ -1,4 +1,4 @@
-/* Importa o estilo principal (Header, Footer, Fundo) */
+/* Importa o estilo principal do site */
 @import url('style.css');
 
 /* Título */
@@ -10,7 +10,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* GRADE DE ÍDOLOS (3 por linha no PC) */
+/* GRADE: Força 3 colunas no computador */
 .noticias-container {
     display: grid;
     gap: 30px;
@@ -19,14 +19,13 @@ h1 {
     margin: 0 auto;
 }
 
-/* Força 3 colunas em telas grandes */
 @media (min-width: 992px) {
     .noticias-container {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr); /* 3 Colunas fixas */
     }
 }
 
-/* Cartão do Ídolo */
+/* Visual do Cartão */
 .noticia {
     background-color: white;
     border-radius: 10px;
@@ -41,16 +40,16 @@ h1 {
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* Imagem do Ídolo */
+/* Imagem */
 .noticia img {
     width: 100%;
-    height: 300px; /* Altura fixa para ficarem iguais */
+    height: 300px; /* Altura fixa para todos ficarem iguais */
     object-fit: cover;
-    object-position: top center; /* Foca no rosto */
+    object-position: top center;
     border-bottom: 5px solid #FFDC02;
 }
 
-/* Nome do Ídolo */
+/* Texto do Nome */
 .noticia-content {
     padding: 15px;
 }

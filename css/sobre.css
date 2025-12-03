@@ -1,7 +1,6 @@
 /* Importa o estilo principal */
 @import url('style.css');
 
-/* Título */
 h1 {
     color: #003087;
     font-size: 40px;
@@ -17,7 +16,7 @@ h2 {
     font-weight: normal;
 }
 
-/* Caixa Branca para o Conteúdo */
+/* Caixa Branca */
 .sobre-box {
     background-color: white;
     max-width: 800px;
@@ -36,23 +35,48 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Estilo do Link de Contato (Botão) */
-.btn-contato {
-    display: inline-block;
+/* Estilo do Botão de Enviar (Sem JS, só visual) */
+.btn-enviar {
     background-color: #009B3A;
     color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 20px;
-    transition: 0.3s;
-    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
     width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.btn-enviar:hover {
+    background-color: #007a2d;
 }
 
-.btn-contato:hover {
-    background-color: #007a2d;
-    transform: scale(1.02);
+/* Link estilizado como botão (aquele do email) */
+.btn-link {
+    display: block;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+.btn-link:hover {
+    background-color: #e0e0e0;
+}
+
+/* Inputs do formulário */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 }
