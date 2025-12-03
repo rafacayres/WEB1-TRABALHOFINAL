@@ -189,29 +189,28 @@ footer a:hover { text-decoration: underline; }
     .menuresponsa nav { display: flex; gap: 15px; }
     .menuresponsa a { color: white; font-size: 14px; }
 
-    /* --- WIDGET FLUTUANTE COPA 2026 (Estilo Player) --- */
+/* --- WIDGET FLUTUANTE COPA 2026 --- */
 .copa-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.95); /* Fundo branco quase sólido */
+    position: fixed; /* Isso que faz flutuar e ficar preso na tela */
+    bottom: 20px;    /* Distância do fundo */
+    right: 20px;     /* Distância da direita */
+    background: rgba(255, 255, 255, 0.95);
     padding: 10px 20px;
-    border-radius: 50px; /* Borda bem redonda */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3); /* Sombra mais forte */
     display: flex;
     align-items: center;
     gap: 15px;
-    z-index: 10000; /* Garante que fique por cima de tudo */
-    border: 2px solid #009B3A; /* Borda verde fina */
+    z-index: 99999; /* Garante que fique em cima de TUDO */
+    border: 2px solid #009B3A;
     backdrop-filter: blur(5px);
     transition: transform 0.3s;
 }
 
 .copa-widget:hover {
-    transform: scale(1.05); /* Cresce um pouquinho ao passar o mouse */
+    transform: scale(1.05);
 }
 
-/* Ícone de Troféu (Bolinha Azul) */
 .copa-icon {
     background: #003087;
     color: #FFDC02;
@@ -222,13 +221,12 @@ footer a:hover { text-decoration: underline; }
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .copa-info {
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
+    text-align: left; /* Garante alinhamento do texto */
 }
 
 .copa-title {
@@ -236,19 +234,13 @@ footer a:hover { text-decoration: underline; }
     font-weight: bold;
     color: #555;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* O Relógio em si */
 #timer {
-    font-family: 'Courier New', monospace; /* Fonte estilo digital */
+    font-family: monospace;
     font-size: 16px;
     font-weight: bold;
     color: #003087;
-    margin-top: 0; /* Remove margem antiga */
-    background: none; /* Remove fundo antigo */
-    padding: 0; /* Remove padding antigo */
-    border: none;
 }
     
 }
