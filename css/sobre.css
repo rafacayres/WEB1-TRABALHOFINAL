@@ -1,27 +1,72 @@
 @import url('style.css');
 
-/* Caixa Branca do Sobre */
-.sobre-box {
-    background: white; padding: 40px; border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left;
-    max-width: 800px; margin: 0 auto;
+/* Títulos */
+h1 {
+    color: #003087;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
 }
-.sobre-box p, .sobre-box span { font-size: 1.1em; line-height: 1.6; color: #444; margin-bottom: 15px; display: block; }
 
-/* ESTILO DO FORMULÁRIO (Agora fica bonito) */
-.form-container {
-    background: #f9f9f9; border: 1px solid #eee; padding: 30px;
-    border-radius: 10px; margin-top: 20px;
+h2 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
 }
-.form-contato label { display: block; font-weight: bold; margin-bottom: 5px; color: #003087; }
-.form-contato input, .form-contato textarea {
-    width: 100%; padding: 12px; margin-bottom: 15px;
-    border: 1px solid #ccc; border-radius: 5px;
-    font-size: 16px; font-family: Arial, sans-serif;
+
+/* CAIXA BRANCA CENTRALIZADA */
+.sobre-box {
+    background-color: white;
+    max-width: 900px; /* Limita a largura para não ficar muito largo */
+    margin: 0 auto;   /* Centraliza na tela */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center; /* Centraliza textos e imagens */
 }
-.btn-enviar {
-    background-color: #009B3A; color: white; padding: 15px;
-    border: none; border-radius: 5px; width: 100%;
-    font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s;
+
+/* FOTO DO PERFIL (Arrumada para não esticar) */
+.perfil-img {
+    max-width: 100%;      /* Não deixa passar da tela */
+    width: 500px;         /* Tamanho ideal da foto */
+    height: auto;         /* Mantém a proporção (não estica) */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 4px solid white;
+    margin-bottom: 30px;
+    display: block;       /* Garante comportamento de bloco */
+    margin-left: auto;    /* Centraliza */
+    margin-right: auto;   /* Centraliza */
 }
-.btn-enviar:hover { background-color: #007a2d; }
+
+/* Texto dos Dados */
+.dados-jogador p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left; /* Dados ficam melhor alinhados a esquerda dentro da caixa */
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.btn-voltar:hover { background-color: #ccc; }
+
+/* Estilos do Formulário (Sobre) */
+.form-container { max-width: 600px; margin: 0 auto; text-align: left; }
+.btn-enviar { background-color: #009B3A; color: white; padding: 15px; width: 100%; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
