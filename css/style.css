@@ -8,14 +8,14 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4; /* Fundo cinza claro padrão */
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- CABEÇALHO --- */
+/* --- CABEÇALHO (Padronizado) --- */
 header {
     width: 100%;
     position: fixed;
@@ -26,17 +26,19 @@ header {
 }
 
 .grena {
-    background-color: #003087;
+    background-color: #003087; /* Azul CBF */
     width: 100%;
     height: 10px;
 }
 
 .verde {
-    background-color: #009B3A;
+    background-color: #009B3A; /* Verde CBF */
     width: 100%;
     height: 10px;
+    position: relative; /* Para segurar o menu mobile */
 }
 
+/* Container do Header */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -44,12 +46,15 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    position: relative;
     height: 90px;
 }
 
-/* Menu */
-.menu nav { display: flex; gap: 20px; }
+/* Menu Desktop */
+.menu nav { 
+    display: flex; 
+    gap: 20px; 
+}
+
 .menu nav a {
     text-decoration: none;
     color: #333;
@@ -57,8 +62,13 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
+    padding: 5px 0;
 }
-.menu nav a:hover { color: #009B3A; border-bottom: 3px solid #FFDC02; }
+
+.menu nav a:hover { 
+    color: #009B3A; 
+    border-bottom: 3px solid #FFDC02; 
+}
 
 /* Logo Central */
 .escudo {
@@ -67,39 +77,45 @@ header {
     transform: translateX(-50%);
     top: 10px;
 }
-.escudo img { height: 70px; transition: 0.3s; }
+
+.escudo img { 
+    height: 70px; 
+    transition: 0.3s; 
+}
 .escudo img:hover { transform: scale(1.1); }
 
-/* Ícones do Header */
+/* Ícones Sociais Desktop */
 .social-icons { display: flex; gap: 15px; }
 .social-icons a { color: #003087; font-size: 20px; }
 
+/* Esconde elementos mobile no desktop */
 .menuresponsa, .escudoresponsa { display: none; }
 
-/* --- CONTEÚDO --- */
+/* --- CONTEÚDO PRINCIPAL --- */
 main {
-    padding-top: 160px;
+    padding-top: 140px; /* Espaço para não ficar atrás do header */
     padding-bottom: 50px;
-    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
     width: 95%;
     flex: 1;
+    text-align: center;
 }
 
 h1 {
     color: #003087;
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 30px;
     font-family: 'Arial Black', sans-serif;
     text-transform: uppercase;
 }
 
-/* Cards */
+/* --- ESTILOS DE NOTÍCIAS (Grid Padrão) --- */
 .noticias-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-top: 20px;
 }
 
 .noticia {
@@ -108,6 +124,7 @@ h1 {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    text-align: left;
 }
 .noticia:hover { transform: translateY(-5px); }
 
@@ -118,74 +135,59 @@ h1 {
     border-bottom: 4px solid #FFDC02;
 }
 
-.noticia-content { padding: 20px; text-align: left; }
+.noticia-content { padding: 20px; }
 .noticia-title {
     font-size: 18px; font-weight: bold; color: #003087;
     text-decoration: none; display: block; margin-bottom: 10px;
 }
 .noticia-date { font-size: 14px; color: #777; }
 
-/* --- PAGINAÇÃO (ESTILO CORRIGIDO) --- */
-.menupaginas {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.page {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #003087; /* Azul da letra */
-    font-weight: bold;
-    font-size: 18px;
-    background-color: white; /* Fundo branco */
-    border-radius: 50%; /* Deixa perfeitamente redondo */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra */
-    transition: all 0.3s ease;
-}
-
-.page:hover, .page.active {
-    background-color: #009B3A; /* Fundo Verde ao passar mouse */
-    color: white; /* Letra Branca */
-    transform: scale(1.1); /* Cresce um pouquinho */
-}
-
-/* RODAPÉ */
+/* --- RODAPÉ --- */
 footer {
-    background-color: rgb(1, 77, 255);
+    background-color: #014DFF;
     text-align: center;
-    padding: 40px 0;
+    padding: 30px 0;
     color: white;
     margin-top: auto;
 }
-footer a { color: white; text-decoration: none; font-weight: bold; }
-footer a:hover { text-decoration: underline; }
-
+footer a { color: #FFDC02; text-decoration: none; }
 .social-footer {
-    display: flex; justify-content: center; align-items: center;
-    gap: 15px; margin-top: 15px; flex-wrap: wrap;
+    display: flex; justify-content: center; gap: 15px; margin-top: 15px;
 }
-.social-footer a { font-size: 24px; color: white; transition: 0.3s; }
-.social-footer a:hover { color: #FFDC02; }
+.social-footer a { color: white; font-size: 24px; }
 
-/* Classes Extras */
-.texto-box {
-    background: white; padding: 40px; border-radius: 10px;
-    text-align: justify; margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-size: 18px; line-height: 1.6;
-}
-
-/* Responsivo */
+/* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 900px) {
-    .container { flex-direction: column; height: auto; gap: 10px; }
-    .menu nav, .escudo, .social-icons { display: none; }
-    .escudoresponsa { display: block; margin: 10px auto; }
-    .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
-    .menuresponsa nav { display: flex; gap: 15px; }
-    .menuresponsa a { color: white; font-size: 14px; }
+    .container { 
+        justify-content: center; 
+        height: auto; 
+        padding: 5px;
+    }
+    
+    /* Esconde menu desktop e logo grande */
+    .menu, .escudo, .social-icons { display: none; }
+    
+    /* Mostra logo mobile */
+    .escudoresponsa { display: block; margin: 5px auto; }
+    
+    /* Configura menu mobile na barra verde */
+    .menuresponsa { 
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        padding: 5px 0;
+    }
+    .menuresponsa nav { 
+        display: flex; 
+        gap: 15px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .menuresponsa a { 
+        color: white; 
+        font-size: 14px; 
+        font-weight: bold; 
+        text-decoration: none; 
+        text-transform: uppercase;
+    }
 }
