@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    /* Fundo cinza claro para substituir a imagem que faltava */
     background-color: #f0f0f0;
     color: #333;
     display: flex;
@@ -46,15 +45,11 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     position: relative;
-    height: 90px; /* Altura fixa para alinhar */
+    height: 90px;
 }
 
 /* Menu */
-.menu nav {
-    display: flex;
-    gap: 20px;
-}
-
+.menu nav { display: flex; gap: 20px; }
 .menu nav a {
     text-decoration: none;
     color: #333;
@@ -63,40 +58,23 @@ header {
     text-transform: uppercase;
     transition: 0.3s;
 }
+.menu nav a:hover { color: #009B3A; border-bottom: 3px solid #FFDC02; }
 
-.menu nav a:hover {
-    color: #009B3A;
-    border-bottom: 3px solid #FFDC02;
-}
-
-/* Logo Centralizada (Absolute) */
+/* Logo Central */
 .escudo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
 }
-
-.escudo img {
-    height: 70px;
-    transition: 0.3s;
-}
+.escudo img { height: 70px; transition: 0.3s; }
 .escudo img:hover { transform: scale(1.1); }
 
-/* Ícones Sociais do Header (Direita) */
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-.social-icons a {
-    color: #003087;
-    font-size: 20px;
-}
+/* Ícones do Header */
+.social-icons { display: flex; gap: 15px; }
+.social-icons a { color: #003087; font-size: 20px; }
 
-/* Esconde elementos Mobile no PC (Isso resolve as duas logos) */
-.menuresponsa, .escudoresponsa {
-    display: none;
-}
+.menuresponsa, .escudoresponsa { display: none; }
 
 /* --- CONTEÚDO --- */
 main {
@@ -117,7 +95,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Cards de Notícias */
+/* Cards */
 .noticias-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -140,26 +118,44 @@ h1 {
     border-bottom: 4px solid #FFDC02;
 }
 
-.noticia-content {
-    padding: 20px;
-    text-align: left;
-}
-
+.noticia-content { padding: 20px; text-align: left; }
 .noticia-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #003087;
+    font-size: 18px; font-weight: bold; color: #003087;
+    text-decoration: none; display: block; margin-bottom: 10px;
+}
+.noticia-date { font-size: 14px; color: #777; }
+
+/* --- PAGINAÇÃO (ESTILO CORRIGIDO) --- */
+.menupaginas {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.page {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
+    color: #003087; /* Azul da letra */
+    font-weight: bold;
+    font-size: 18px;
+    background-color: white; /* Fundo branco */
+    border-radius: 50%; /* Deixa perfeitamente redondo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra */
+    transition: all 0.3s ease;
 }
 
-.noticia-date {
-    font-size: 14px;
-    color: #777;
+.page:hover, .page.active {
+    background-color: #009B3A; /* Fundo Verde ao passar mouse */
+    color: white; /* Letra Branca */
+    transform: scale(1.1); /* Cresce um pouquinho */
 }
 
-/* --- RODAPÉ (Azulão) --- */
+/* RODAPÉ */
 footer {
     background-color: rgb(1, 77, 255);
     text-align: center;
@@ -167,32 +163,17 @@ footer {
     color: white;
     margin-top: auto;
 }
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+footer a { color: white; text-decoration: none; font-weight: bold; }
 footer a:hover { text-decoration: underline; }
 
-/* Icones do Rodapé */
 .social-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-    flex-wrap: wrap; /* Para não quebrar se tiver muitos */
+    display: flex; justify-content: center; align-items: center;
+    gap: 15px; margin-top: 15px; flex-wrap: wrap;
 }
-
-.social-footer a {
-    font-size: 24px; /* Ícones maiores */
-    color: white;
-    transition: 0.3s;
-}
+.social-footer a { font-size: 24px; color: white; transition: 0.3s; }
 .social-footer a:hover { color: #FFDC02; }
 
-/* Classes extras para História/Sobre */
+/* Classes Extras */
 .texto-box {
     background: white; padding: 40px; border-radius: 10px;
     text-align: justify; margin-bottom: 30px;
@@ -202,7 +183,7 @@ footer a:hover { text-decoration: underline; }
 /* Responsivo */
 @media (max-width: 900px) {
     .container { flex-direction: column; height: auto; gap: 10px; }
-    .menu nav, .escudo, .social-icons { display: none; } /* Esconde PC */
+    .menu nav, .escudo, .social-icons { display: none; }
     .escudoresponsa { display: block; margin: 10px auto; }
     .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
     .menuresponsa nav { display: flex; gap: 15px; }
