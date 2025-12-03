@@ -1,380 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Importa o estilo principal (Header, Footer, Fundo) */
+@import url('style.css');
+
+/* Título */
+h1 {
+    color: #003087;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
-header {
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-}
-
-main {
-    color: transparent;
-    background-size: 100% 100%;
-    padding-top: 100px; 
-    text-align: center;
-    padding-left: 280px;
-    padding-right: 280px;
-    flex: 1;
-}
-
-html, body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-body{
-    background: url(../img/background_inicio.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-}
-
-h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 60px;
-}
-
-h2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.container {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 4px;
-    background-color: white;
-}
-
-.menu {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.menu nav {
-    display: flex;
-    gap: 20px;
-}
-
-.menuresponsa {
-    display: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: 1s;
-}
-
-header a{
-    padding-right: 25px;
-    padding-left: 25px;
-}
-nav a:hover {
-    text-shadow: rgb(0, 97, 60) 0px 0px 7px;
-    font-size: 20px;
-  }
-
-.escudo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.escudoresponsa {
-    display: none;
-}
-
-.grena {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-
-.verde {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1px;
-}
-
-.social-icons a {
-    font-size: 20px;
-    color: black;
-    margin-right: 10px;
-    transition: 1s;
-}
-
-.social-icons a:hover {
-    color: rgb(135, 10, 40);
-    transform: scale(1.20); /* Efeito hover */
-}
-
-footer {
-    background: rgb(1, 77, 255);
-    text-align: center;
-    padding: 20px;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.menusobre {
-    padding: 20px;
-}
-
-.menusobre a {
-    font-size: 25px;
-}
-
-.titulosobre{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: rgb(0, 0, 0) 5px 5px 5px;
-}
-
-footer .social-icons {
-    display: none;         
-}
-
+/* GRADE DE ÍDOLOS (3 por linha no PC) */
 .noticias-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 1200px;
-}
-.noticia {
-    background-color:  rgba(0, 0, 0, 0.576);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-.noticia:hover {
-    transform: scale(1.05);
+    margin: 0 auto;
 }
 
-/* --- AQUI ESTÁ A CORREÇÃO DAS IMAGENS --- */
+/* Força 3 colunas em telas grandes */
+@media (min-width: 992px) {
+    .noticias-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/* Cartão do Ídolo */
+.noticia {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.noticia:hover {
+    transform: translateY(-10px); /* Sobe ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Imagem do Ídolo */
 .noticia img {
     width: 100%;
-    height: 250px;        /* Aumentei um pouco para a foto caber melhor */
-    object-fit: cover;    /* ISSO corrige o bug de ficar "amassado" */
-    object-position: top; /* Garante que o rosto do jogador apareça e não corte a cabeça */
+    height: 300px; /* Altura fixa para ficarem iguais */
+    object-fit: cover;
+    object-position: top center; /* Foca no rosto */
+    border-bottom: 5px solid #FFDC02;
 }
-/* ---------------------------------------- */
 
+/* Nome do Ídolo */
 .noticia-content {
     padding: 15px;
 }
+
 .noticia-title {
-    font-size: 1.2em;
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #e2dada;
-    font-size: 29px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
 }
 
-.noticia-date {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
-}
-
-/* Responsividade */
-@media (max-width: 1290px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .noticia:hover {
-        transform: none;
-    }
-    
-    .social-icons {
-        display: none; 
-    }
-    
-    footer .social-icons {
-        display: flex; 
-        justify-content: center; 
-        margin-top: 10px;
-    }
-
-    .menu {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .menu nav {
-        align-items: center;
-        gap: 15px;
-        display: none;
-    }
-
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-    }
-    .social-icons a:hover {
-        color:  rgb(1, 201, 125);
-    }
-
-    .menuresponsa{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .imgescudoresponsa{
-        width: 50px;
-    }
-
-    .menuresponsa a {
-        color: white;
-    }
-    
-    .menuresponsa nav {
-        display: flex;
-        gap: 80px;
-    }
-
-    .escudo {
-        display: none;
-    }
-
-    .escudoresponsa {
-        position: absolute;
-        top: -115%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .social-icons {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    main{
-        background-size: 100% 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .imgresponsa{
-        width: 90%;
-        height: auto;
-    }
-    h1{
-        font-size: 30px;
-    }
-    h2{
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 580px) {
-    header a {
-        font-size: 14px;
-        padding: 5px;
-    }
-    
-    body{
-        background: url(../img/darkbackflu_mobile.jpg);
-        background-size: 100% 100%;
-        background-attachment: fixed;
-    }
-
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-    }
-
-    .imgescudoresponsa{
-        width: 40px;
-    }
-
-    .container {
-        padding: 5px;
-    }
-
-    .menu nav {
-        gap: 10px;
-    }
-
-    .menuresponsa{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .menuresponsa nav {
-        display: flex;
-        gap: 20px;
-    }
-
-    main{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    
-    .social-icons {
-        display: none; 
-    }
-
-    
-    footer .social-icons {
-        display: flex;
-        justify-content: center; 
-        margin-top: 10px;
-    }
-    .imgresponsa{
-        width: 80%;
-        height: auto;
-    }
-}
-@media (max-width: 390px) {
-    .menuresponsa nav {
-        display: flex;
-        gap: 20px;
-    }
-}
-
-/* Responsividade para notícias */
-@media (max-width: 992px) {
-    .noticias-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 600px) {
-    .noticias-container {
-        grid-template-columns: 1fr;
-    }
+.noticia-title:hover {
+    color: #003087;
 }

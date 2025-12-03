@@ -1,472 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Importa o estilo principal */
+@import url('style.css');
+
+/* Título */
+h1 {
+    color: #003087;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
 }
 
-header {
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
+h2 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: normal;
 }
 
-.sobre-conteudo{
-  width: 100%;
-  padding-right: 55%;
+/* Caixa Branca para o Conteúdo */
+.sobre-box {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
-main {
-  color: black;
-  background-size: 100% 100%;
-  padding-top: 100px; 
-  text-align: left;
-  flex: 1;
-}
-
-html, body{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-body{
-  background: url(../img/darkbackflu.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-}
-
-h1{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 60px;
-  text-shadow: 2px 2px 2px #000;
-}
-
-h2{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-h3{
-  font-size: 40px;
-  color: #fcfffe;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-shadow: 2px 2px 2px #000;
-}
-
-span {
-  font-size: 20px;
-  text-shadow: 2px 2px 2px #000;
-}
-
-.container {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding: 4px;
-  background-color: white;
-}
-
-
-
-.menu {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.menu nav {
-  display: flex;
-  gap: 20px;
-}
-
-.menuresponsa {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  transition: 1s;
-}
-
-header a{
-  padding-right: 25px;
-  padding-left: 25px;
-}
-nav a:hover {
-  text-shadow: rgb(0, 97, 60) 0px 0px 7px;
-  font-size: 20px;
-}
-
-.escudo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.escudoresponsa {
-  display: none;
-}
-
-.grena {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-
-.verde {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1px;
-}
-
-.social-icons a {
-  font-size: 20px;
-  color: black;
-  margin-right: 10px;
-  transition: 1s;
-}
-
-.social-icons a:hover {
-  color: rgb(135, 10, 40); 
-  transform: scale(1.20);
-}
-
-
-
-footer {
-  background: rgb(1, 77, 255);
-  text-align: center;
-  padding: 20px;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.menusobre {
-  padding: 20px;
-}
-
-.menusobre a {
-  font-size: 25px;
-}
-
-.titulosobre{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
-}
-
-
-footer .social-icons {
-  display: none;         
-}
-
-.noticias-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-}
-
-.contato-container {
-  display: flex;
-  justify-content: left;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-}
-
-.contato-container-responsa{
-  display: none;
-}
-
-.noticia {
-  background-color:  rgb(255, 255, 255);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-
-.noticia:hover {
-  transform: scale(1.05);
-}
-
-.contato {
-  background-color:  rgb(255, 255, 255);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-
-.contato:hover {
-  transform: scale(1.05);
-  background-color: rgb(200, 239, 225);
-}
-
-.noticia img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.noticia-content {
-  padding: 15px;
-}
-.noticia-title {
-  font-size: 1.2em;
-  margin: 0;
-  color: #333;
-}
-
-.noticia-date {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 5px;
-}
-
-.linkemail{
-  color: rgb(0, 87, 12);
-  text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 1290px) {
-  .container {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .sobre-conteudo{
-    padding-right: 40%;
-  }
-
-  
-  .social-icons {
-      display: none; 
-  }
-
-  .noticia:hover {
-    transform: none;
-}
-  
-  footer .social-icons {
-      display: flex; /* Mostra os ícones no footer */
-      justify-content: center; /* Centraliza no footer */
-      margin-top: 10px;
-  }
-
-  .menu {
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 10px;
-  }
-
-  .menu nav {
-      align-items: center;
-      gap: 15px;
-      display: none;
-  }
-
-  .social-icons a {
-      font-size: 18px;
-      color: white;
-  }
-
-  .social-icons a:hover {
-      color:  rgb(1, 201, 125);
-  }
-
-
-  .menuresponsa{
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-  }
-
-  .imgescudoresponsa{
-      width: 50px;
-  }
-
-  .menuresponsa a {
-      color: white;
-  }
-  
-  .menuresponsa nav {
-      display: flex;
-      gap: 80px;
-  }
-
-  .escudo {
-      display: none;
-  }
-
-  .escudoresponsa {
-      position: absolute;
-      top: -115%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-  }
-
-  .social-icons {
-      justify-content: center;
-      margin-top: 10px;
-  }
-
-  main{
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-
-  .imgresponsa{
-      width: 80%;
-      height: auto;
-  }
-  h1{
-      font-size: 30px;
-  }
-  h2{
-      font-size: 18px;
-  }
-}
-
-@media (max-width: 580px) {
-  header a {
-      font-size: 14px;
-      padding: 5px;
-  }
-
-  .social-icons a {
-      font-size: 18px;
-      color: white;
-  }
-
-  .sobre-conteudo{
-    padding-right: 0;
-  }
-
-
-  body{
-    background: url(../img/darkbackflu_mobile.jpg);
-    background-size: 100% 100%;
-    background-attachment: fixed;
-  }
-
-  .imgescudoresponsa{
-      width: 40px;
-  }
-
-  .container {
-      padding: 5px;
-  }
-
-  .menu nav {
-      gap: 10px;
-  }
-
-  .menuresponsa{
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-  }
-
-  .menuresponsa nav {
-      display: flex;
-      gap: 20px;
-  }
-
-  main{
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-
-  
-  .social-icons {
-      display: none; 
-  }
-
-  
-  footer .social-icons {
-      display: flex; 
-      justify-content: center; 
-      margin-top: 10px;
-  }
-  .imgresponsa{
-      width: 70%;
-      height: auto;
-  }
-}
-@media (max-width: 390px) {
-  .menuresponsa nav {
-      display: flex;
-      gap: 20px;
-  }
-}
-
-/* Estilo da Paginação  */
-
-.menupaginas {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    color: white; /* Cor do número */
+.sobre-box p, .sobre-box span {
     font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Estilo do Link de Contato (Botão) */
+.btn-contato {
+    display: inline-block;
+    background-color: #009B3A;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
     font-weight: bold;
-    background-color: rgba(253, 221, 0); /* O Amarelinho */
-    border-radius: 50%; /* Deixa redondo */
+    font-size: 18px;
+    margin-top: 20px;
     transition: 0.3s;
+    text-align: center;
+    width: 100%;
 }
 
-.page:hover {
-    background-color: rgb(0, 97, 60); /* Verde ao passar o mouse */
-}
-
-/* Responsividade para notícias */
-@media (max-width: 992px) {
-  .noticias-container {
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .noticias-container {
-      grid-template-columns: 1fr;
-  }
-
-
-
+.btn-contato:hover {
+    background-color: #007a2d;
+    transform: scale(1.02);
 }
