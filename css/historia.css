@@ -1,45 +1,16 @@
-@import url('style.css'); 
+@import url('style.css');
 
-/* Estilo específico para o texto da história */
-main {
-    text-align: center;
-    padding-top: 160px; 
-    padding-bottom: 50px;
+.texto-historia {
+    background: white; padding: 40px; border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: justify;
+    line-height: 1.8; color: #444; font-size: 1.1em;
 }
-
-h1 {
-    color: #003087; /* Azul CBF */
-    font-size: 40px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    font-family: 'Arial Black', sans-serif;
+/* Botão da Tabela */
+.btn-acao {
+    background: #003087; color: white; padding: 12px 30px; border-radius: 30px;
+    border: none; cursor: pointer; font-size: 16px; font-weight: bold; margin: 20px 0;
 }
-
-/* Caixa branca para o texto ficar legível */
-.texto-box {
-    background-color: white;
-    max-width: 900px;
-    margin: 0 auto; /* Centraliza a caixa */
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Sombra leve */
-    text-align: justify; /* Texto justificado fica mais elegante */
-}
-
-.texto-box p {
-    font-size: 18px;
-    line-height: 1.6; /* Espaço entre linhas para ler melhor */
-    color: #444;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #009B3A; /* Verde CBF */
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.noticias-container {
-    margin-top: 20px;
-}
+/* Tabela */
+.tabela-js { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+.tabela-js th { background: #003087; color: white; padding: 12px; }
+.tabela-js td { border: 1px solid #ddd; padding: 12px; text-align: center; }

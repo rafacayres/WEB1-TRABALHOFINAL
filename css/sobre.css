@@ -1,82 +1,27 @@
-/* Importa o estilo principal */
 @import url('style.css');
 
-h1 {
-    color: #003087;
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-family: 'Arial Black', sans-serif;
-}
-
-h2 {
-    color: #555;
-    font-size: 20px;
-    margin-bottom: 30px;
-    font-weight: normal;
-}
-
-/* Caixa Branca */
+/* Caixa Branca do Sobre */
 .sobre-box {
-    background-color: white;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    text-align: left;
+    background: white; padding: 40px; border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left;
+    max-width: 800px; margin: 0 auto;
 }
+.sobre-box p, .sobre-box span { font-size: 1.1em; line-height: 1.6; color: #444; margin-bottom: 15px; display: block; }
 
-.sobre-box p, .sobre-box span {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-    display: block;
-    margin-bottom: 15px;
+/* ESTILO DO FORMULÁRIO (Agora fica bonito) */
+.form-container {
+    background: #f9f9f9; border: 1px solid #eee; padding: 30px;
+    border-radius: 10px; margin-top: 20px;
 }
-
-/* Estilo do Botão de Enviar (Sem JS, só visual) */
+.form-contato label { display: block; font-weight: bold; margin-bottom: 5px; color: #003087; }
+.form-contato input, .form-contato textarea {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    border: 1px solid #ccc; border-radius: 5px;
+    font-size: 16px; font-family: Arial, sans-serif;
+}
 .btn-enviar {
-    background-color: #009B3A;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
+    background-color: #009B3A; color: white; padding: 15px;
+    border: none; border-radius: 5px; width: 100%;
+    font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s;
 }
-.btn-enviar:hover {
-    background-color: #007a2d;
-}
-
-/* Link estilizado como botão (aquele do email) */
-.btn-link {
-    display: block;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-}
-.btn-link:hover {
-    background-color: #e0e0e0;
-}
-
-/* Inputs do formulário */
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-}
+.btn-enviar:hover { background-color: #007a2d; }

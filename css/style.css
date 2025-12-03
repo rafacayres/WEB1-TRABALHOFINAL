@@ -1,237 +1,55 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    /* Fundo cinza claro moderno (já que a imagem de fundo sumiu) */
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4; /* Fundo cinza para destacar o conteúdo branco */
     color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: flex; flex-direction: column; min-height: 100vh;
 }
 
-/* --- HEADER (Estilo CBF - Branco e Limpo) --- */
-header {
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve */
-}
-
-/* Faixas finas e elegantes */
-.grena {
-    background-color: #003087; /* Azul Oficial */
-    width: 100%;
-    height: 8px;
-}
-
-.verde {
-    background-color: #009B3A; /* Verde Oficial */
-    width: 100%;
-    height: 8px;
-}
+/* HEADER BRANCO (Estilo CBF) */
+header { width: 100%; position: fixed; top: 0; z-index: 1000; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.grena { height: 8px; background: linear-gradient(90deg, #003087, #0056b3); width: 100%; }
+.verde { height: 8px; background: linear-gradient(90deg, #009B3A, #00ca4e); width: 100%; }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Menu na esq, Social na dir */
-    position: relative; /* Importante para a logo centralizada */
-    padding: 10px 20px;
-    background-color: white;
-    height: 80px; /* Altura fixa para alinhar */
+    max-width: 1200px; margin: 0 auto; display: flex; align-items: center; 
+    justify-content: space-between; padding: 10px 20px; height: 80px;
 }
 
-/* Menu na Esquerda */
-.menu {
-    display: flex;
-    align-items: center;
-}
+.menu nav { display: flex; gap: 20px; }
+.menu nav a { text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 15px; transition: 0.3s; }
+.menu nav a:hover { color: #009B3A; border-bottom: 2px solid #FFDC02; }
 
-.menu nav {
-    display: flex;
-    gap: 20px;
-}
-
-.menu nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-.menu nav a:hover {
-    color: #009B3A;
-    border-bottom: 3px solid #FFDC02; /* Detalhe amarelo no hover */
-}
-
-/* Logo Centralizada (Sua lógica original mantida) */
-.escudo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 5px;
-}
-
-.escudo img {
-    width: 60px; /* Tamanho controlado */
-    transition: transform 0.3s;
-}
+.escudo { position: absolute; left: 50%; transform: translateX(-50%); top: 10px; }
+.escudo img { height: 60px; transition: transform 0.3s; }
 .escudo img:hover { transform: scale(1.1); }
 
-/* Mobile Oculto */
-.menuresponsa, .escudoresponsa {
-    display: none;
-}
+.social-icons { display: flex; gap: 15px; }
+.social-icons a { font-size: 20px; color: #003087; transition: 0.3s; }
+.social-icons a:hover { color: #009B3A; }
 
-/* Ícones Sociais na Direita */
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
+.menuresponsa, .escudoresponsa { display: none; }
 
-.social-icons a {
-    font-size: 20px;
-    color: #003087; /* Azul */
-    transition: 0.3s;
-}
+/* MAIN */
+main { padding-top: 150px; padding-bottom: 50px; text-align: center; max-width: 1200px; margin: 0 auto; width: 95%; flex: 1; }
+h1 { color: #003087; font-size: 2.5em; margin-bottom: 20px; font-family: 'Arial Black', sans-serif; text-transform: uppercase; }
 
-.social-icons a:hover {
-    color: #009B3A;
-    transform: scale(1.2);
-}
+/* RODAPÉ (Com link formatado) */
+footer { background: rgb(1, 77, 255); text-align: center; padding: 20px; color: white; margin-top: auto; }
+footer a { color: white; text-decoration: underline; font-weight: bold; }
+footer .social-icons { justify-content: center; margin-top: 10px; }
+footer .social-icons a { color: white; text-decoration: none; }
 
-/* --- CONTEÚDO --- */
-main {
-    padding-top: 140px; /* Espaço pro header */
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    flex: 1;
-}
-
-h1 {
-    font-family: 'Arial Black', sans-serif; /* Fonte mais forte */
-    font-size: 40px;
-    color: #003087;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* GRID DE NOTÍCIAS */
-.noticias-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* CARD DA NOTÍCIA (Estilo "Box" Branco) */
-.noticia {
-    background-color: white;
-    border-radius: 10px; /* Bordas redondas */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra elegante */
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.noticia:hover {
-    transform: translateY(-5px); /* Sobe ao passar o mouse */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.noticia img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 4px solid #FFDC02; /* Detalhe amarelo */
-}
-
-.noticia-content {
-    padding: 20px;
-    text-align: left;
-}
-
-.noticia-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-    line-height: 1.4;
-    text-decoration: none;
-}
-.noticia-title:hover { color: #003087; }
-
-.noticia-date {
-    font-size: 0.85em;
-    color: #888;
-    margin-top: 10px;
-    display: block;
-}
-
-/* Paginação */
-.menupaginas {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 40px;
-}
-
-.page {
-    display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px;
-    background-color: white;
-    color: #003087;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50%; /* Bolinha */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.page:hover {
-    background-color: #009B3A;
-    color: white;
-}
-
-/* --- RODAPÉ (Igual ao seu original) --- */
-footer {
-    background: rgb(1, 77, 255);
-    text-align: center;
-    padding: 30px;
-    color: white;
-    width: 100%;
-    margin-top: 50px;
-}
-
-footer .social-icons {
-    justify-content: center;
-    margin-top: 15px;
-}
-footer .social-icons a { color: white; }
-
-/* RESPONSIVO (Sua lógica mantida) */
-@media (max-width: 1000px) {
-    .container { flex-direction: column; height: auto; padding: 10px; }
-    .menu nav, .social-icons, .escudo { display: none; } /* Esconde desktop */
-    
-    .escudoresponsa { display: block; margin: 10px auto; }
-    
-    .menuresponsa {
-        display: flex; justify-content: center; width: 100%;
-        background-color: #003087; padding: 10px;
-    }
+/* Mobile */
+@media (max-width: 900px) {
+    .container { flex-direction: column; height: auto; gap: 10px; }
+    .menu nav, .escudo, header .social-icons { display: none; }
+    .escudoresponsa { display: block; margin: 5px auto; }
+    .menuresponsa { display: flex; justify-content: center; width: 100%; padding: 10px; }
     .menuresponsa nav { display: flex; gap: 15px; }
-    .menuresponsa a { color: white; font-size: 14px; text-decoration: none; font-weight: bold; }
-    
+    .menuresponsa a { color: white; font-size: 14px; font-weight: bold; text-decoration: none; }
     footer .social-icons { display: flex; }
 }

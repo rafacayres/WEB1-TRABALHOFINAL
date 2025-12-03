@@ -1,67 +1,20 @@
-/* Importa o estilo principal do site */
 @import url('style.css');
 
-/* Título */
-h1 {
-    color: #003087;
-    font-family: 'Arial Black', sans-serif;
-    font-size: 40px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
-/* GRADE: Força 3 colunas no computador */
+/* Grade de Ídolos */
 .noticias-container {
-    display: grid;
-    gap: 30px;
+    display: grid; gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 1200px;
-    margin: 0 auto;
 }
-
 @media (min-width: 992px) {
-    .noticias-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 Colunas fixas */
-    }
+    .noticias-container { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Visual do Cartão */
+/* Card do Ídolo */
 .noticia {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-    text-align: center;
+    background: white; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; text-align: center;
 }
-
-.noticia:hover {
-    transform: translateY(-10px); /* Sobe ao passar o mouse */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* Imagem */
-.noticia img {
-    width: 100%;
-    height: 300px; /* Altura fixa para todos ficarem iguais */
-    object-fit: cover;
-    object-position: top center;
-    border-bottom: 5px solid #FFDC02;
-}
-
-/* Texto do Nome */
-.noticia-content {
-    padding: 15px;
-}
-
-.noticia-title {
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-    text-decoration: none;
-    display: block;
-}
-
-.noticia-title:hover {
-    color: #003087;
-}
+.noticia:hover { transform: translateY(-10px); }
+.noticia img { width: 100%; height: 300px; object-fit: cover; object-position: top center; border-bottom: 5px solid #FFDC02; }
+.noticia-title { font-size: 1.5em; color: #333; font-weight: bold; display: block; padding: 15px; text-decoration: none; }
+.noticia-title:hover { color: #003087; }
