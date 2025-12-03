@@ -1,103 +1,117 @@
-/* --- style.css --- */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 1. FUNDO NOVO (Substituindo a imagem quebrada) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(180deg, #f3f3f3 0%, #dcdcdc 100%); /* Fundo cinza suave */
-    background-attachment: fixed;
+    /* Fundo cinza claro moderno (já que a imagem de fundo sumiu) */
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* 2. CABEÇALHO NOVO (Estilo Oficial) */
+/* --- HEADER (Estilo CBF - Branco e Limpo) --- */
 header {
     width: 100%;
     position: fixed;
     z-index: 9999;
-    top: 0;
-    background-color: white; /* Fundo branco */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra elegante */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve */
 }
 
-/* Faixa Azul no topo */
+/* Faixas finas e elegantes */
 .grena {
-    background: linear-gradient(90deg, #003087, #0056b3);
-    width: 100%;
-    height: 8px; /* Mais fina */
-}
-
-/* Faixa Verde em baixo */
-.verde {
-    background: linear-gradient(90deg, #009B3A, #00ca4e);
+    background-color: #003087; /* Azul Oficial */
     width: 100%;
     height: 8px;
 }
 
-/* Container do Menu */
+.verde {
+    background-color: #009B3A; /* Verde Oficial */
+    width: 100%;
+    height: 8px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Menu na esq, Social na dir */
+    position: relative; /* Importante para a logo centralizada */
     padding: 10px 20px;
     background-color: white;
+    height: 80px; /* Altura fixa para alinhar */
 }
 
-/* Logo */
-.escudo img {
-    height: 65px; /* Tamanho controlado */
-    transition: transform 0.3s;
-}
-.escudo img:hover {
-    transform: scale(1.1);
+/* Menu na Esquerda */
+.menu {
+    display: flex;
+    align-items: center;
 }
 
-/* Links do Menu */
 .menu nav {
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 .menu nav a {
     text-decoration: none;
-    color: #333; /* Texto escuro */
+    color: #333;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
-    position: relative;
 }
 
 .menu nav a:hover {
-    color: #009B3A; /* Verde ao passar o mouse */
+    color: #009B3A;
+    border-bottom: 3px solid #FFDC02; /* Detalhe amarelo no hover */
 }
 
-/* Ícones Sociais */
+/* Logo Centralizada (Sua lógica original mantida) */
+.escudo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+}
+
+.escudo img {
+    width: 60px; /* Tamanho controlado */
+    transition: transform 0.3s;
+}
+.escudo img:hover { transform: scale(1.1); }
+
+/* Mobile Oculto */
+.menuresponsa, .escudoresponsa {
+    display: none;
+}
+
+/* Ícones Sociais na Direita */
 .social-icons {
     display: flex;
     gap: 15px;
 }
+
 .social-icons a {
-    color: #003087;
     font-size: 20px;
+    color: #003087; /* Azul */
     transition: 0.3s;
 }
+
 .social-icons a:hover {
     color: #009B3A;
+    transform: scale(1.2);
 }
 
-/* 3. CONTEÚDO PRINCIPAL */
+/* --- CONTEÚDO --- */
 main {
-    padding-top: 150px; /* Espaço para o header não cobrir o título */
+    padding-top: 140px; /* Espaço pro header */
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
@@ -105,34 +119,34 @@ main {
 }
 
 h1 {
+    font-family: 'Arial Black', sans-serif; /* Fonte mais forte */
     font-size: 40px;
     color: #003087;
-    margin-bottom: 30px;
-    font-weight: 800;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-/* 4. CARDS DE NOTÍCIAS */
+/* GRID DE NOTÍCIAS */
 .noticias-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* CARD DA NOTÍCIA (Estilo "Box" Branco) */
 .noticia {
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px; /* Bordas redondas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra elegante */
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .noticia:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: translateY(-5px); /* Sobe ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .noticia img {
@@ -148,17 +162,17 @@ h1 {
 }
 
 .noticia-title {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
-    color: #003087;
-    margin-bottom: 10px;
-    text-decoration: none;
-    display: block;
+    color: #333;
+    margin: 0;
     line-height: 1.4;
+    text-decoration: none;
 }
+.noticia-title:hover { color: #003087; }
 
 .noticia-date {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #888;
     margin-top: 10px;
     display: block;
@@ -168,27 +182,28 @@ h1 {
 .menupaginas {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 40px;
 }
 
 .page {
     display: flex; align-items: center; justify-content: center;
     width: 40px; height: 40px;
-    text-decoration: none;
-    color: #003087;
-    font-weight: bold;
     background-color: white;
-    border-radius: 50%;
+    color: #003087;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50%; /* Bolinha */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
 .page:hover {
-    background-color: #FFDC02;
+    background-color: #009B3A;
+    color: white;
 }
 
-/* Rodapé (Mantendo o original, só ajustando cor) */
+/* --- RODAPÉ (Igual ao seu original) --- */
 footer {
     background: rgb(1, 77, 255);
     text-align: center;
@@ -198,14 +213,25 @@ footer {
     margin-top: 50px;
 }
 
-/* Responsividade Básica */
-.menuresponsa, .escudoresponsa { display: none; }
+footer .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+}
+footer .social-icons a { color: white; }
 
-@media (max-width: 900px) {
-    .container { flex-direction: column; gap: 10px; }
-    .menu nav, .escudo, .social-icons { display: none; }
+/* RESPONSIVO (Sua lógica mantida) */
+@media (max-width: 1000px) {
+    .container { flex-direction: column; height: auto; padding: 10px; }
+    .menu nav, .social-icons, .escudo { display: none; } /* Esconde desktop */
+    
     .escudoresponsa { display: block; margin: 10px auto; }
-    .menuresponsa { display: flex; justify-content: center; width: 100%; padding: 10px; }
+    
+    .menuresponsa {
+        display: flex; justify-content: center; width: 100%;
+        background-color: #003087; padding: 10px;
+    }
     .menuresponsa nav { display: flex; gap: 15px; }
     .menuresponsa a { color: white; font-size: 14px; text-decoration: none; font-weight: bold; }
+    
+    footer .social-icons { display: flex; }
 }
