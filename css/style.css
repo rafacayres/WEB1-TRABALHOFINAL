@@ -125,7 +125,7 @@ h1 {
 }
 .noticia-date { font-size: 14px; color: #777; }
 
-/* --- PAGINAÇÃO (ESTILO CORRIGIDO) --- */
+/* --- PAGINAÇÃO --- */
 .menupaginas {
     margin-top: 40px;
     display: flex;
@@ -140,19 +140,19 @@ h1 {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #003087; /* Azul da letra */
+    color: #003087;
     font-weight: bold;
     font-size: 18px;
-    background-color: white; /* Fundo branco */
-    border-radius: 50%; /* Deixa perfeitamente redondo */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra */
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
 .page:hover, .page.active {
-    background-color: #009B3A; /* Fundo Verde ao passar mouse */
-    color: white; /* Letra Branca */
-    transform: scale(1.1); /* Cresce um pouquinho */
+    background-color: #009B3A;
+    color: white;
+    transform: scale(1.1);
 }
 
 /* RODAPÉ */
@@ -180,28 +180,34 @@ footer a:hover { text-decoration: underline; }
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-size: 18px; line-height: 1.6;
 }
 
-/* Responsivo */
+/* --- RESPONSIVO (MOBILE) --- */
 @media (max-width: 900px) {
-    .container { flex-direction: caolumn; height: auto; gap: 10px; }
+    .container { 
+        flex-direction: column; /* CORRIGIDO: estava 'caolumn' */
+        height: auto; 
+        gap: 10px; 
+    }
     .menu nav, .escudo, .social-icons { display: none; }
     .escudoresponsa { display: block; margin: 10px auto; }
     .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
     .menuresponsa nav { display: flex; gap: 15px; }
     .menuresponsa a { color: white; font-size: 14px; }
+} /* <--- FALTAVA FECHAR AQUI O BLOCO RESPONSIVO */
 
-/* --- WIDGET FLUTUANTE COPA 2026 --- */
+
+/* --- WIDGET FLUTUANTE COPA 2026 (AGORA FORA DO RESPONSIVO) --- */
 .copa-widget {
-    position: fixed; /* Isso que faz flutuar e ficar preso na tela */
-    bottom: 20px;    /* Distância do fundo */
-    right: 20px;     /* Distância da direita */
+    position: fixed;
+    top: 130px;      /* 130px do topo (para ficar logo abaixo do menu) */
+    right: 20px;     /* 20px da direita */
     background: rgba(255, 255, 255, 0.95);
     padding: 10px 20px;
     border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3); /* Sombra mais forte */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     gap: 15px;
-    z-index: 99999; /* Garante que fique em cima de TUDO */
+    z-index: 99999;
     border: 2px solid #009B3A;
     backdrop-filter: blur(5px);
     transition: transform 0.3s;
@@ -226,7 +232,7 @@ footer a:hover { text-decoration: underline; }
 .copa-info {
     display: flex;
     flex-direction: column;
-    text-align: left; /* Garante alinhamento do texto */
+    text-align: left;
 }
 
 .copa-title {
@@ -241,6 +247,4 @@ footer a:hover { text-decoration: underline; }
     font-size: 16px;
     font-weight: bold;
     color: #003087;
-}
-    
 }
