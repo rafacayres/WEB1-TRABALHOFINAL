@@ -1,52 +1,45 @@
-@import url('style.css');
+@import url('style.css'); 
 
-/* Caixa Branca para o texto da História */
-.texto-historia {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
-    text-align: justify; /* Texto justificado fica mais elegante */
-    line-height: 1.8; /* Espaçamento entre linhas para ler melhor */
-    font-size: 1.1em;
-    color: #444;
+/* Estilo específico para o texto da história */
+main {
+    text-align: center;
+    padding-top: 160px; 
+    padding-bottom: 50px;
+}
+
+h1 {
+    color: #003087; /* Azul CBF */
+    font-size: 40px;
     margin-bottom: 30px;
-}
-
-.btn-acao {
-    background-color: #003087;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 20px 0;
-    transition: 0.3s;
-}
-.btn-acao:hover {
-    background-color: #009B3A;
-}
-
-/* Estilo da Tabela que aparece com o JS */
-.tabela-js {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    margin-top: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.tabela-js th {
-    background: #003087;
-    color: white;
-    padding: 12px;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-family: 'Arial Black', sans-serif;
 }
-.tabela-js td {
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    color: #333;
-    font-size: 0.95em;
+
+/* Caixa branca para o texto ficar legível */
+.texto-box {
+    background-color: white;
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza a caixa */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Sombra leve */
+    text-align: justify; /* Texto justificado fica mais elegante */
+}
+
+.texto-box p {
+    font-size: 18px;
+    line-height: 1.6; /* Espaço entre linhas para ler melhor */
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #009B3A; /* Verde CBF */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.noticias-container {
+    margin-top: 20px;
 }
