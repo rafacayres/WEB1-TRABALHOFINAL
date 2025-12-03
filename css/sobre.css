@@ -1,10 +1,9 @@
 @import url('style.css');
 
-/* Títulos */
 h1 {
     color: #003087;
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     font-family: 'Arial Black', sans-serif;
     text-align: center;
@@ -12,50 +11,49 @@ h1 {
 
 h2 {
     color: #555;
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 30px;
     text-align: center;
     font-weight: bold;
 }
 
-/* CAIXA BRANCA CENTRALIZADA */
-.sobre-box {
+/* CAIXA BRANCA DO CONTEÚDO */
+.sobre-box, .perfil-box {
     background-color: white;
-    max-width: 900px; /* Limita a largura para não ficar muito largo */
-    margin: 0 auto;   /* Centraliza na tela */
+    max-width: 900px;
+    margin: 0 auto;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    text-align: center; /* Centraliza textos e imagens */
+    text-align: left;
 }
 
-/* FOTO DO PERFIL (Arrumada para não esticar) */
+/* FOTO DO PERFIL INTERNO (Correção do tamanho) */
 .perfil-img {
-    max-width: 100%;      /* Não deixa passar da tela */
-    width: 500px;         /* Tamanho ideal da foto */
-    height: auto;         /* Mantém a proporção (não estica) */
+    display: block;
+    margin: 0 auto 30px auto; /* Centraliza */
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border: 4px solid white;
-    margin-bottom: 30px;
-    display: block;       /* Garante comportamento de bloco */
-    margin-left: auto;    /* Centraliza */
-    margin-right: auto;   /* Centraliza */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 5px solid white;
+    
+    /* O SEGREDO ESTÁ AQUI: */
+    width: 100%;         /* Tenta ocupar espaço... */
+    max-width: 600px;    /* ...mas trava em 600px pra não ficar gigante */
+    height: auto;        /* Altura automática pra não esticar */
 }
 
-/* Texto dos Dados */
+/* Texto dos dados */
 .dados-jogador p {
     font-size: 18px;
     line-height: 1.8;
     color: #333;
-    margin-bottom: 15px;
-    text-align: left; /* Dados ficam melhor alinhados a esquerda dentro da caixa */
+    margin-bottom: 20px;
 }
 
 /* Botão Voltar */
 .btn-voltar {
     display: inline-block;
-    background-color: #e0e0e0;
+    background-color: #ddd;
     color: #333;
     padding: 10px 20px;
     border-radius: 30px;
@@ -66,7 +64,7 @@ h2 {
 }
 .btn-voltar:hover { background-color: #ccc; }
 
-/* Estilos do Formulário (Sobre) */
-.form-container { max-width: 600px; margin: 0 auto; text-align: left; }
+/* Formulário do Sobre */
+.form-container { max-width: 600px; margin: 0 auto; }
 .btn-enviar { background-color: #009B3A; color: white; padding: 15px; width: 100%; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
 input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
