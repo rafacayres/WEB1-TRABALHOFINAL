@@ -188,4 +188,47 @@ footer a:hover { text-decoration: underline; }
     .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
     .menuresponsa nav { display: flex; gap: 15px; }
     .menuresponsa a { color: white; font-size: 14px; }
+    /* --- NOVO BANNER RUMO AO HEXA --- */
+.banner-hexa {
+    background: linear-gradient(135deg, #003087 0%, #009B3A 100%); /* Degradê Azul e Verde */
+    color: white;
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 6px solid #FFDC02; /* Linha amarela na base */
+}
+
+.banner-hexa h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 32px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFDC02; /* Título Amarelo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-hexa p {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.9;
+    color: white;
+}
+
+#timer {
+    background: rgba(255, 255, 255, 0.2); /* Fundo branco transparente */
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255,255,255,0.3);
+    font-family: monospace; /* Fonte estilo relógio digital */
+}
 }
