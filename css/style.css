@@ -1,408 +1,211 @@
+/* --- style.css --- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 1. FUNDO NOVO (Substituindo a imagem quebrada) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f3f3f3 0%, #dcdcdc 100%); /* Fundo cinza suave */
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. CABEÇALHO NOVO (Estilo Oficial) */
 header {
     width: 100%;
     position: fixed;
     z-index: 9999;
-    z-index: 9999;
+    top: 0;
+    background-color: white; /* Fundo branco */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra elegante */
 }
 
-main {
-    background-size: 100% 100%;
-    padding-top: 100px; 
-    text-align: center;
-    padding-left: 190px;
-    padding-right: 190px;
-    flex: 1;
+/* Faixa Azul no topo */
+.grena {
+    background: linear-gradient(90deg, #003087, #0056b3);
+    width: 100%;
+    height: 8px; /* Mais fina */
 }
 
-html, body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-body{
-    background: url(../img/TORCIDASELECAO.png);
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
+/* Faixa Verde em baixo */
+.verde {
+    background: linear-gradient(90deg, #009B3A, #00ca4e);
+    width: 100%;
+    height: 8px;
 }
 
-h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 60px;
-}
-
-h2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-
-
+/* Container do Menu */
 .container {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    padding: 4px;
+    padding: 10px 20px;
     background-color: white;
 }
 
-.menu {
-    display: flex;
-    justify-content: flex-start;
+/* Logo */
+.escudo img {
+    height: 65px; /* Tamanho controlado */
+    transition: transform 0.3s;
+}
+.escudo img:hover {
+    transform: scale(1.1);
 }
 
+/* Links do Menu */
 .menu nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-.menuresponsa {
-    display: none;
-}
-
-a {
+.menu nav a {
     text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: 1s;
+    color: #333; /* Texto escuro */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    position: relative;
 }
 
-header a{
-    padding-right: 25px;
-    padding-left: 25px;
-}
-nav a:hover {
-    text-shadow: rgb(0, 97, 60) 0px 0px 7px;
-    font-size: 20px;
-  }
-
-.escudo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.menu nav a:hover {
+    color: #009B3A; /* Verde ao passar o mouse */
 }
 
-.escudoresponsa {
-    display: none;
-}
-
-.grena {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-
-.verde {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-
+/* Ícones Sociais */
 .social-icons {
     display: flex;
-    justify-content: flex-end;
-    gap: 1px;
+    gap: 15px;
 }
-
 .social-icons a {
+    color: #003087;
     font-size: 20px;
-    color: black;
-    margin-right: 10px;
-    transition: 1s;
+    transition: 0.3s;
 }
-
 .social-icons a:hover {
-    color: rgb(135, 10, 40);
-    transform: scale(1.20); 
+    color: #009B3A;
 }
 
-
-
-footer {
-    background: rgb(1, 77, 255);
+/* 3. CONTEÚDO PRINCIPAL */
+main {
+    padding-top: 150px; /* Espaço para o header não cobrir o título */
     text-align: center;
-    padding: 20px;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex: 1;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+h1 {
+    font-size: 40px;
+    color: #003087;
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-.menusobre {
-    padding: 20px;
-}
-
-.menusobre a {
-    font-size: 25px;
-}
-
-.titulosobre{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: rgb(0, 0, 0) 5px 5px 5px;
-}
-
-
-footer .social-icons {
-    display: none;        
-}
-
+/* 4. CARDS DE NOTÍCIAS */
 .noticias-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    gap: 30px;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
+
 .noticia {
-    background-color:  rgb(255, 255, 255);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
 }
+
 .noticia:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
+
 .noticia img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-bottom: 4px solid #FFDC02; /* Detalhe amarelo */
 }
+
 .noticia-content {
-    padding: 15px;
+    padding: 20px;
+    text-align: left;
 }
+
 .noticia-title {
     font-size: 1.2em;
-    margin: 0;
-    color: #333;
+    font-weight: bold;
+    color: #003087;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    line-height: 1.4;
 }
 
 .noticia-date {
     font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
+    color: #888;
+    margin-top: 10px;
+    display: block;
 }
 
+/* Paginação */
 .menupaginas {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
+    margin-top: 40px;
 }
 
 .page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: #003087;
     font-weight: bold;
-    background-color: rgba(253, 221, 0);
+    background-color: white;
     border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
 .page:hover {
-    background-color:rgb(0, 97, 60);
+    background-color: #FFDC02;
 }
 
-/* Responsividade */
-@media (max-width: 1290px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .noticia:hover {
-        transform: none;
-    }
-
-    .social-icons {
-        display: none; 
-    }
-    
-    footer .social-icons {
-        display: flex; 
-        justify-content: center; 
-        margin-top: 10px;
-    }
-
-    .menu {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .menu nav {
-        align-items: center;
-        gap: 15px;
-        display: none;
-    }
-
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-    }
-    .social-icons a:hover {
-        color:  rgb(1, 201, 125);
-    }
-
-    .menuresponsa{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .imgescudoresponsa{
-        width: 50px;
-    }
-
-    .menuresponsa a {
-        color: white;
-    }
-    
-    .menuresponsa nav {
-        display: flex;
-        gap: 80px;
-    }
-
-    .escudo {
-        display: none;
-    }
-
-    .escudoresponsa {
-        position: absolute;
-        top: -115%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .social-icons {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    main{
-        background-size: 100% 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .imgresponsa{
-        width: 50%;
-        height: auto;
-    }
-    h1{
-        font-size: 30px;
-        color: #20195F;
-    }
-    h2{
-        font-size: 18px;
-    }
+/* Rodapé (Mantendo o original, só ajustando cor) */
+footer {
+    background: rgb(1, 77, 255);
+    text-align: center;
+    padding: 30px;
+    color: white;
+    width: 100%;
+    margin-top: 50px;
 }
 
-@media (max-width: 580px) {
-    header a {
-        font-size: 14px;
-        padding: 5px;
-    }
-    
-    body{
-        background: url(../img/darkbackflu_mobile.jpg);
-        background-size: 100% 100%;
-        background-attachment: fixed;
-    }
+/* Responsividade Básica */
+.menuresponsa, .escudoresponsa { display: none; }
 
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-    }
-
-    .imgescudoresponsa{
-        width: 40px;
-    }
-
-    .container {
-        padding: 5px;
-    }
-
-    .menu nav {
-        gap: 10px;
-    }
-
-    .menuresponsa{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-
-    .menuresponsa nav {
-        display: flex;
-        gap: 20px;
-    }
-
-    main{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-   
-    .social-icons {
-        display: none; 
-    }
-
-    
-    footer .social-icons {
-        display: flex; 
-        justify-content: center; 
-        margin-top: 10px;
-    }
-    .imgresponsa{
-        width: 50%;
-        height: auto;
-    }
+@media (max-width: 900px) {
+    .container { flex-direction: column; gap: 10px; }
+    .menu nav, .escudo, .social-icons { display: none; }
+    .escudoresponsa { display: block; margin: 10px auto; }
+    .menuresponsa { display: flex; justify-content: center; width: 100%; padding: 10px; }
+    .menuresponsa nav { display: flex; gap: 15px; }
+    .menuresponsa a { color: white; font-size: 14px; text-decoration: none; font-weight: bold; }
 }
-@media (max-width: 390px) {
-    .menuresponsa nav {
-        display: flex;
-        gap: 20px;
-    }
-}
-
-/* Responsividade para notícias */
-@media (max-width: 992px) {
-    .noticias-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 600px) {
-    .noticias-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-
