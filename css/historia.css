@@ -1,424 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-  }
-  
-  main {
-    background-size: 100% 100%;
-    padding-top: 100px; 
-    text-align: left;
-    padding-left: 280px;
-    padding-right: 280px;
-    flex: 1;
-  }
-  
-  html, body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  body{
-    background: url(../img/historiaback.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-  }
-  
-  h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 60px;
-    text-shadow: 2px 2px 2px #000;
-  }
-  
-  h2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  h3{
-    font-size: 40px;
-    color: rgb(153, 247, 215);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: 2px 2px 2px #000;
-  }
-  
-  .container {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 4px;
+@import url('style.css');
+
+/* Caixa Branca para o texto da História */
+.texto-historia {
     background-color: white;
-  }
-  
-  
-  
-  .menu {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .menu nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menuresponsa {
-    display: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: 1s;
-  }
-  
-  header a{
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-  nav a:hover {
-    text-shadow: rgb(0, 97, 60) 0px 0px 7px;
-    font-size: 20px;
-  }
-  
-  .escudo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .escudoresponsa {
-    display: none;
-  }
-  
-.grena {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
+    padding: 40px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
+    text-align: justify; /* Texto justificado fica mais elegante */
+    line-height: 1.8; /* Espaçamento entre linhas para ler melhor */
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 30px;
 }
 
-.verde {
-    background-color: rgb(1, 77, 255);
-    width: 100%;
-    height: 25px;
-}
-  
-  .social-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1px;
-  }
-  
-  .social-icons a {
-    font-size: 20px;
-    color: black;
-    margin-right: 10px;
-    transition: 1s;
-  }
-  
-  .social-icons a:hover {
-    color: rgb(135, 10, 40);
-    transform: scale(1.20);
-    transform: scale(1.20);
-  }
-  
-  
-  
-  footer {
-    background: rgb(1, 77, 255);
-    text-align: center;
-    padding: 20px;
+.btn-acao {
+    background-color: #003087;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menusobre {
-    padding: 20px;
-  }
-  
-  .menusobre a {
-    font-size: 25px;
-  }
-  
-  .titulosobre{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: rgb(0, 0, 0) 5px 5px 5px;
-  }
-  
-  
-  footer .social-icons {
-    display: none;        
-  }
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+.btn-acao:hover {
+    background-color: #009B3A;
+}
 
-  .noticias-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+/* Estilo da Tabela que aparece com o JS */
+.tabela-js {
     width: 100%;
-    max-width: 1200px;
-  }
-  
-  .contato-container {
-    display: flex;
-    justify-content: left;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .contato-container-responsa{
-    display: none;
-  }
-  
-  .noticia {
-    background-color:  rgb(255, 255, 255);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  
-  
-  .noticia:hover {
-    transform: scale(1.05);
-  }
-  
-  .contato {
-    background-color:  rgb(255, 255, 255);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  
-  
-  .contato:hover {
-    transform: scale(1.05);
-    background-color: rgb(200, 239, 225);
-  }
-  
-  .noticia img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  .noticia-content {
-    padding: 15px;
-  }
-  .noticia-title {
-    font-size: 1.2em;
-    margin: 0;
-    color: #333;
-  }
-  
-  .noticia-date {
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.tabela-js th {
+    background: #003087;
+    color: white;
+    padding: 12px;
+    text-transform: uppercase;
     font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
-  }
-  
-  .linkemail{
-    color: rgb(0, 87, 12);
-    text-decoration: underline;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 1290px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .noticia:hover {
-      transform: none;
-  }
-  
-    .social-icons {
-        display: none; 
-    }
-    
-    
-    footer .social-icons {
-        display: flex; 
-        justify-content: center; 
-        margin-top: 10px;
-    }
-  
-    .menu {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-  
-    .menu nav {
-        align-items: center;
-        gap: 15px;
-        display: none;
-    }
-  
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-    }
-  
-    .social-icons a:hover {
-        color:  rgb(1, 201, 125);
-    }
-  
-  
-    .menuresponsa{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-  
-    .imgescudoresponsa{
-        width: 50px;
-    }
-  
-    .menuresponsa a {
-        color: white;
-    }
-    
-    .menuresponsa nav {
-        display: flex;
-        gap: 80px;
-    }
-  
-    .escudo {
-        display: none;
-    }
-  
-    .escudoresponsa {
-        position: absolute;
-        top: -115%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-  
-    .social-icons {
-        justify-content: center;
-        margin-top: 10px;
-    }
-  
-    main{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-  
-    .imgresponsa{
-        width: 80%;
-        height: auto;
-    }
-    h1{
-        font-size: 30px;
-    }
-    h2{
-        font-size: 18px;
-    }
-  }
-  
-  @media (max-width: 580px) {
-    header a {
-        font-size: 14px;
-        padding: 5px;
-    }
-  
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-    }
-  
-    body{
-      background: url(../img/darkbackflu_mobile.jpg);
-      background-size: 100% 100%;
-      background-attachment: fixed;
-    }
-  
-    .imgescudoresponsa{
-        width: 40px;
-    }
-  
-    .container {
-        padding: 5px;
-    }
-  
-    .menu nav {
-        gap: 10px;
-    }
-  
-    .menuresponsa{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
-  
-    .menuresponsa nav {
-        display: flex;
-        gap: 20px;
-    }
-  
-    main{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-  
-    .social-icons {
-        display: none; 
-    }
-  
-    
-    footer .social-icons {
-        display: flex; 
-        justify-content: center; 
-        margin-top: 10px;
-    }
-    .imgresponsa{
-        width: 70%;
-        height: auto;
-    }
-  }
-  @media (max-width: 390px) {
-    .menuresponsa nav {
-        display: flex;
-        gap: 20px;
-    }
-  }
-  
-  /* Responsividade para notícias */
-  @media (max-width: 992px) {
-    .noticias-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 600px) {
-    .noticias-container {
-        grid-template-columns: 1fr;
-    }
-  
-
-  }
+}
+.tabela-js td {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    color: #333;
+    font-size: 0.95em;
+}
