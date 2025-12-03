@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -18,34 +18,29 @@ body {
 /* --- CABEÇALHO --- */
 header {
     width: 100%;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
     background-color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .grena {
-    background-color: #003087;
-    width: 100%;
+    background-color: #003087; /* Azul */
     height: 10px;
+    width: 100%;
 }
 
 .verde {
-    background-color: #009B3A;
-    width: 100%;
+    background-color: #009B3A; /* Verde */
     height: 10px;
+    width: 100%;
 }
 
-.container {
+.container-header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    position: relative;
-    height: 90px;
 }
 
 /* Menu */
@@ -53,37 +48,30 @@ header {
 .menu nav a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 16px;
     transition: 0.3s;
 }
-.menu nav a:hover { color: #009B3A; border-bottom: 3px solid #FFDC02; }
+.menu nav a:hover { color: #009B3A; border-bottom: 2px solid #FFDC02; }
 
-/* Logo Central */
-.escudo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
+/* Logo */
+.logo-central img { height: 70px; }
+
+/* Ícones do Topo */
+.social-header a {
+    color: #003087;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
 }
-.escudo img { height: 70px; transition: 0.3s; }
-.escudo img:hover { transform: scale(1.1); }
-
-/* Ícones do Header */
-.social-icons { display: flex; gap: 15px; }
-.social-icons a { color: #003087; font-size: 20px; }
-
-.menuresponsa, .escudoresponsa { display: none; }
 
 /* --- CONTEÚDO --- */
 main {
-    padding-top: 160px;
-    padding-bottom: 50px;
-    text-align: center;
     max-width: 1200px;
-    margin: 0 auto;
-    width: 95%;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
     flex: 1;
 }
 
@@ -91,15 +79,23 @@ h1 {
     color: #003087;
     font-size: 40px;
     margin-bottom: 30px;
-    font-family: 'Arial Black', sans-serif;
     text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
 }
 
-/* Cards */
+/* --- GRADE DE NOTÍCIAS (Isso arruma as fotos gigantes) --- */
 .noticias-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    gap: 25px;
+    width: 100%;
+}
+
+/* Garante 3 colunas em telas grandes */
+@media (min-width: 992px) {
+    .noticias-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
 
 .noticia {
@@ -113,49 +109,19 @@ h1 {
 
 .noticia img {
     width: 100%;
-    height: 200px;
+    height: 220px; /* Altura fixa para não estourar */
     object-fit: cover;
     border-bottom: 4px solid #FFDC02;
 }
 
-.noticia-content { padding: 20px; text-align: left; }
+.noticia-content { padding: 15px; text-align: left; }
 .noticia-title {
     font-size: 18px; font-weight: bold; color: #003087;
     text-decoration: none; display: block; margin-bottom: 10px;
 }
 .noticia-date { font-size: 14px; color: #777; }
 
-/* --- PAGINAÇÃO (ESTILO CORRIGIDO) --- */
-.menupaginas {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.page {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #003087; /* Azul da letra */
-    font-weight: bold;
-    font-size: 18px;
-    background-color: white; /* Fundo branco */
-    border-radius: 50%; /* Deixa perfeitamente redondo */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra */
-    transition: all 0.3s ease;
-}
-
-.page:hover, .page.active {
-    background-color: #009B3A; /* Fundo Verde ao passar mouse */
-    color: white; /* Letra Branca */
-    transform: scale(1.1); /* Cresce um pouquinho */
-}
-
-/* RODAPÉ */
+/* --- RODAPÉ (Com todos os ícones) --- */
 footer {
     background-color: rgb(1, 77, 255);
     text-align: center;
@@ -163,29 +129,42 @@ footer {
     color: white;
     margin-top: auto;
 }
+
 footer a { color: white; text-decoration: none; font-weight: bold; }
 footer a:hover { text-decoration: underline; }
 
 .social-footer {
-    display: flex; justify-content: center; align-items: center;
-    gap: 15px; margin-top: 15px; flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
-.social-footer a { font-size: 24px; color: white; transition: 0.3s; }
+.social-footer a { font-size: 24px; color: white; }
 .social-footer a:hover { color: #FFDC02; }
 
-/* Classes Extras */
-.texto-box {
+/* Elementos da página Sobre e História */
+.texto-box, .sobre-box {
     background: white; padding: 40px; border-radius: 10px;
-    text-align: justify; margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-size: 18px; line-height: 1.6;
+    text-align: justify; margin-bottom: 30px; line-height: 1.6;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-    .container { flex-direction: column; height: auto; gap: 10px; }
-    .menu nav, .escudo, .social-icons { display: none; }
-    .escudoresponsa { display: block; margin: 10px auto; }
-    .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
-    .menuresponsa nav { display: flex; gap: 15px; }
-    .menuresponsa a { color: white; font-size: 14px; }
+/* Estilo do Formulário */
+.form-container { max-width: 600px; margin: 0 auto; text-align: left; }
+.form-container input, .form-container textarea {
+    width: 100%; padding: 10px; margin-bottom: 15px;
+    border: 1px solid #ccc; border-radius: 5px;
 }
+.btn-enviar {
+    background-color: #009B3A; color: white; padding: 15px;
+    width: 100%; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;
+}
+
+/* Paginação */
+.menupaginas { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
+.page {
+    width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+    background: white; color: #003087; text-decoration: none; font-weight: bold; border-radius: 50%;
+}
+.page.active, .page:hover { background: #009B3A; color: white; }
