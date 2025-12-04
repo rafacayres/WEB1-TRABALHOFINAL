@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const nome = document.getElementById("nome").value.trim();
             const email = document.getElementById("email").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
-
-            // Validação simples
+            
             if (nome === "" || email === "" || mensagem === "") {
                 alert("Por favor, preencha todos os campos!");
                 return;
@@ -41,9 +40,33 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Sucesso
             alert(`Obrigado, ${nome}! Sua mensagem foi enviada.`);
-            form.reset(); // Limpa os campos
+            form.reset(); 
         });
     }
 });
+
+/* --- FUNCIONALIDADE 3: VALIDAÇÃO DA IDADE NO FORMULÁRIO | Deve ser maior de 18 (Sobre) --- */
+    function validarIdade(idade){
+        if (idade < 16) {
+        alert("Contato permitido para maiores 16 anos.");
+        return false;
+    }
+    return true;
+}
+    Uso: if(!validarIdade(idade)) return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
