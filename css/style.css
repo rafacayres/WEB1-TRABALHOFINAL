@@ -180,7 +180,7 @@ footer a:hover { text-decoration: underline; }
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-size: 18px; line-height: 1.6;
 }
 
-/* --- RESPONSIVO (MOBILE) --- */
+/* --- RESPONSIVO--- */
 @media (max-width: 900px) {
     .container { 
         flex-direction: column; 
@@ -195,7 +195,7 @@ footer a:hover { text-decoration: underline; }
 } 
 
 
-/* --- WIDGET FLUTUANTE COPA 2026 --- */
+/* --- WIDGET --- */
 .copa-widget {
     position: fixed;
     top: 130px;     

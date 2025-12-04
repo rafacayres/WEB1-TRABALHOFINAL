@@ -214,7 +214,7 @@ footer .social-icons {
     }
     
     footer .social-icons {
-        display: flex; /* Mostra os ícones no footer */
+        display: flex; 
         justify-content: center; /* Centraliza no footer */
         margin-top: 10px;
     }

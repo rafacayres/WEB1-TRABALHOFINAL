@@ -1,4 +1,4 @@
-/* Importa o visual padrão do site */
+
 @import url('style.css');
 
 h1 {
@@ -19,7 +19,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* --- ESTILO DA TABELA (Exigência 1) --- */
+/* --- ESTILO DA TABELA  --- */
 .tabela-conquistas {
     width: 100%;
     max-width: 1000px;
@@ -48,14 +48,14 @@ h2 {
 }
 
 .tabela-conquistas tr:nth-child(even) {
-    background-color: #f9f9f9; /* Listrado suave */
+    background-color: #f9f9f9; 
 }
 
 .tabela-conquistas tr:hover {
-    background-color: #e0f7fa; /* Efeito ao passar o mouse */
+    background-color: #e0f7fa; 
 }
 
-/* --- ESTILO DAS LISTAS (Exigências 2 e 3) --- */
+
 .container-listas {
     display: flex;
     flex-wrap: wrap;
@@ -75,7 +75,7 @@ h2 {
     min-width: 300px;
 }
 
-/* Lista Não Ordenada (Bolinhas) */
+
 ul.lista-titulos {
     list-style-type: square; /* Quadrado ou disc */
     padding-left: 20px;
@@ -87,9 +87,9 @@ ul.lista-titulos li {
     font-size: 18px;
 }
 
-/* Lista Ordenada (Números) */
+
 ol.lista-artilheiros {
-    list-style-type: decimal; /* 1, 2, 3... */
+    list-style-type: decimal; 
     padding-left: 20px;
     color: #333;
 }
