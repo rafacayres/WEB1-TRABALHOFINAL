@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     }
 
-    /* --- FUNCIONALIDADE 2: VALIDAÇÃO DE FORMULÁRIO (Sobre) --- */
+    /* VALIDAÇÃO DE FORMULÁRIO */
     const form = document.querySelector("form");
 
     if (form) { 
