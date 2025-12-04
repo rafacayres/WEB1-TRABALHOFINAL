@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     }
 
-    /* --- FUNCIONALIDADES : VALIDAÇÃO DE FORMULÁRIO (Sobre) --- */
+    /* --- FUNCIONALIDADE 2: VALIDAÇÃO DE FORMULÁRIO (Sobre) --- */
     const form = document.querySelector("form");
 
     if (form) { // Só roda se existir um formulário na página
@@ -29,41 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
             const nome = document.getElementById("nome").value.trim();
             const email = document.getElementById("email").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
-            const idade = document.getElementById("idade").value.trim();
-            
-/* --- FUNCIONALIDADE: NECESSIDADE DE TODOS OS CAMPOS PREENCHIDOS (Sobre) --- */
-            
-            if (nome === "" || email === "" || mensagem === ""|| idade === '') {
+
+            // Validação simples
+            if (nome === "" || email === "" || mensagem === "") {
                 alert("Por favor, preencha todos os campos!");
                 return;
             }
-/* --- FUNCIONALIDADE: NECESSIDADE DE FORMATAÇÃO IDEAL DE EMAIL '@.COM' (Sobre) --- */
 
             if (!email.includes("@") || !email.includes(".")) {
                 alert("Por favor, insira um e-mail válido.");
                 return;
-            }            
-            
-/* --- FUNCIONALIDADE : VALIDAÇÃO DA IDADE NO FORMULÁRIO | Deve ser maior de 16 (Sobre) --- */
+            }
 
-            //  if (idade < 16) {
-            //             alert("Contato permitido para maiores 16 anos.");
-            //             return false;
-            //         }
-            // return true;  
-
-            
+            // Sucesso
             alert(`Obrigado, ${nome}! Sua mensagem foi enviada.`);
-            form.reset(); 
+            form.reset(); // Limpa os campos
         });
     }
-
-
-
-
-
-
-
+});
 
 
 
