@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
             
 /* --- FUNCIONALIDADE : VALIDAÇÃO DA IDADE NO FORMULÁRIO | Deve ser maior de 16 (Sobre) --- */
 
-             if (idade < 16) {
-                        alert("Contato permitido para maiores 16 anos.");
-                        return false;
-                    }
-            return true;  
+            //  if (idade < 16) {
+            //             alert("Contato permitido para maiores 16 anos.");
+            //             return false;
+            //         }
+            // return true;  
 
             
             alert(`Obrigado, ${nome}! Sua mensagem foi enviada.`);
