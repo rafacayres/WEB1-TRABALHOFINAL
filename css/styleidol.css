@@ -10,33 +10,27 @@ header {
     z-index: 9999;
 }
 
-/* --- CORREÇÃO DE ALINHAMENTO --- */
 main {
-    background-size: cover; /* Ajustado para melhor visualização */
-    padding-top: 120px; 
+    background-size: 100% 100%;
+    padding-top: 100px; 
     text-align: left;
+    padding-left: 280px;
+    padding-right: 280px;
     flex: 1;
-
-    /* Centralizando corretamente */
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
 }
 
 html, body{
     height: 100%;
     display: flex;
     flex-direction: column;
-}
+  }
 
 body{
     background: url(../img/background_inicio.jpg);
     background-size: cover;
     background-attachment: fixed;
-    /* Removi o display flex duplicado daqui para não conflitar */
+    display: flex;
+    align-items: center;
 }
 
 h1{
@@ -47,6 +41,8 @@ h1{
 h2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+
 
 .container {
     margin: 0 auto;
@@ -128,13 +124,22 @@ nav a:hover {
     transform: scale(1.20); /* Efeito hover */
 }
 
+
+
 footer {
     background: rgb(1, 77, 255);
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     color: white;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    margin-top: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .menusobre {
@@ -150,6 +155,7 @@ footer {
     text-shadow: rgb(0, 0, 0) 5px 5px 5px;
 }
 
+
 footer .social-icons {
     display: none;        
 }
@@ -159,6 +165,7 @@ footer .social-icons {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
+    max-width: 1200px;
     text-align: center;
 }
 .noticia {
@@ -180,6 +187,7 @@ footer .social-icons {
     padding: 15px;
 }
 .noticia-title {
+    font-size: 1.2em;
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #e2dada;
@@ -206,6 +214,7 @@ footer .social-icons {
     .social-icons {
         display: none; 
     }
+    
     
     footer .social-icons {
         display: flex; 
@@ -339,6 +348,7 @@ footer .social-icons {
         display: none; 
     }
 
+    
     footer .social-icons {
         display: flex; 
         justify-content: center; 

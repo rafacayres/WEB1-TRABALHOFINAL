@@ -28,7 +28,7 @@ h2 {
     text-align: left;
 }
 
-/* FOTO DO PERFIL INTERNO (Correção do tamanho) */
+
 .perfil-img {
     display: block;
     margin: 0 auto 30px auto; /* Centraliza */
@@ -36,10 +36,10 @@ h2 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     border: 5px solid white;
     
-    /* O SEGREDO ESTÁ AQUI: */
-    width: 100%;         /* Tenta ocupar espaço... */
-    max-width: 600px;    /* ...mas trava em 600px pra não ficar gigante */
-    height: auto;        /* Altura automática pra não esticar */
+
+    width: 100%;         
+    max-width: 600px;    
+    height: auto;        
 }
 
 /* Texto dos dados */
