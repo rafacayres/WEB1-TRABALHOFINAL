@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- CABEÇALHO --- */
+/* --- HEADER --- */
 header {
     width: 100%;
     position: fixed;
@@ -48,8 +48,12 @@ header {
     height: 90px;
 }
 
-/* Menu */
-.menu nav { display: flex; gap: 20px; }
+/* NAVIGATION */
+.menu nav { 
+    display: flex; 
+    gap: 20px; 
+}
+
 .menu nav a {
     text-decoration: none;
     color: #333;
@@ -58,35 +62,52 @@ header {
     text-transform: uppercase;
     transition: 0.3s;
 }
-.menu nav a:hover { color: #009B3A; border-bottom: 3px solid #FFDC02; }
 
-/* Logo Central */
+.menu nav a:hover { 
+    color: #009B3A; 
+    border-bottom: 3px solid #FFDC02; 
+}
+
+/* LOGO */
 .escudo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
 }
-.escudo img { height: 70px; transition: 0.3s; }
-.escudo img:hover { transform: scale(1.1); }
 
-/* Ícones do Header */
-.social-icons { display: flex; gap: 15px; }
-.social-icons a { color: #003087; font-size: 20px; }
+.escudo img { 
+    height: 70px; 
+    transition: 0.3s; 
+}
 
-.menuresponsa, .escudoresponsa { display: none; }
+.escudo img:hover { 
+    transform: scale(1.1); 
+}
 
-/* --- CONTEÚDO (Corrigido para Centralizar) --- */
+/* HEADER ICONS */
+.social-icons { 
+    display: flex; 
+    gap: 15px; 
+}
+
+.social-icons a { 
+    color: #003087; 
+    font-size: 20px; 
+}
+
+.menuresponsa, .escudoresponsa { 
+    display: none; 
+}
+
+/* --- MAIN CONTENT --- */
 main {
     padding-top: 160px;
     padding-bottom: 50px;
     text-align: center;
-    
-    /* Centralização */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    
     flex: 1;
 }
 
@@ -98,7 +119,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Cards */
+/* NEWS GRID */
 .noticias-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -112,7 +133,10 @@ h1 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
-.noticia:hover { transform: translateY(-5px); }
+
+.noticia:hover { 
+    transform: translateY(-5px); 
+}
 
 .noticia img {
     width: 100%;
@@ -121,17 +145,29 @@ h1 {
     border-bottom: 4px solid #FFDC02;
 }
 
-.noticia-content { padding: 20px; text-align: left; }
-.noticia-title {
-    font-size: 18px; font-weight: bold; color: #003087;
-    text-decoration: none; display: block; margin-bottom: 10px;
+.noticia-content { 
+    padding: 20px; 
+    text-align: left; 
 }
-.noticia-date { font-size: 14px; color: #777; }
 
-/* --- PAGINAÇÃO --- */
+.noticia-title {
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #003087;
+    text-decoration: none; 
+    display: block; 
+    margin-bottom: 10px;
+}
+
+.noticia-date { 
+    font-size: 14px; 
+    color: #777; 
+}
+
+/* PAGINATION */
 .menupaginas {
     margin-top: 40px;
-    display: flex;
+    display: flex; 
     justify-content: center;
     gap: 15px;
 }
@@ -158,48 +194,115 @@ h1 {
     transform: scale(1.1);
 }
 
-/* RODAPÉ */
+.texto-box {
+    background: white; 
+    padding: 40px; 
+    border-radius: 10px;
+    text-align: justify; 
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    font-size: 18px; 
+    line-height: 1.6;
+}
+
+/* --- FOOTER --- */
 footer {
     background-color: rgb(1, 77, 255);
-    text-align: center;
-    padding: 40px 0;
-    color: white;
     width: 100%;
+    padding: 15px 50px;
+    color: white;
     margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-footer a { color: white; text-decoration: none; font-weight: bold; }
-footer a:hover { text-decoration: underline; }
+
+footer a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 .social-footer {
-    display: flex; justify-content: center; align-items: center;
-    gap: 15px; margin-top: 15px; flex-wrap: wrap;
-}
-.social-footer a { font-size: 24px; color: white; transition: 0.3s; }
-.social-footer a:hover { color: #FFDC02; }
-
-
-.texto-box {
-    background: white; padding: 40px; border-radius: 10px;
-    text-align: justify; margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-size: 18px; line-height: 1.6;
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+    margin: 0;
 }
 
-/* --- RESPONSIVO (MOBILE) --- */
+.social-footer span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.social-footer a { 
+    font-size: 20px; 
+    color: white; 
+    transition: 0.3s; 
+    display: flex;
+    align-items: center;
+}
+
+.social-footer a:hover { 
+    color: #FFDC02; 
+    transform: scale(1.2);
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 900px) {
     .container { 
         flex-direction: column; 
         height: auto; 
         gap: 10px; 
     }
-    .menu nav, .escudo, .social-icons { display: none; }
-    .escudoresponsa { display: block; margin: 10px auto; }
-    .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
-    .menuresponsa nav { display: flex; gap: 15px; }
-    .menuresponsa a { color: white; font-size: 14px; }
-} 
+    
+    .menu nav, .escudo, .social-icons { 
+        display: none; 
+    }
+    
+    .escudoresponsa { 
+        display: block; 
+        margin: 10px auto; 
+    }
+    
+    .menuresponsa { 
+        display: flex; 
+        justify-content: center; 
+        padding: 10px; 
+        width: 100%; 
+    }
+    
+    .menuresponsa nav { 
+        display: flex; 
+        gap: 15px; 
+    }
+    
+    .menuresponsa a { 
+        color: white; 
+        font-size: 14px; 
+    }
+}
 
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .social-footer {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 
-/* --- WIDGET FLUTUANTE COPA 2026 --- */
+/* --- WIDGET COPA 2026 --- */
 .copa-widget {
     position: fixed;
     top: 130px;     
