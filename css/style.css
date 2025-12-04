@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+z@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -173,7 +173,7 @@ footer a:hover { text-decoration: underline; }
 .social-footer a { font-size: 24px; color: white; transition: 0.3s; }
 .social-footer a:hover { color: #FFDC02; }
 
-/* Classes Extras */
+
 .texto-box {
     background: white; padding: 40px; border-radius: 10px;
     text-align: justify; margin-bottom: 30px;
@@ -183,7 +183,7 @@ footer a:hover { text-decoration: underline; }
 /* --- RESPONSIVO (MOBILE) --- */
 @media (max-width: 900px) {
     .container { 
-        flex-direction: column; /* CORRIGIDO: estava 'caolumn' */
+        flex-direction: column; 
         height: auto; 
         gap: 10px; 
     }
@@ -192,14 +192,14 @@ footer a:hover { text-decoration: underline; }
     .menuresponsa { display: flex; justify-content: center; padding: 10px; width: 100%; }
     .menuresponsa nav { display: flex; gap: 15px; }
     .menuresponsa a { color: white; font-size: 14px; }
-} /* <--- FALTAVA FECHAR AQUI O BLOCO RESPONSIVO */
+} 
 
 
-/* --- WIDGET FLUTUANTE COPA 2026 (AGORA FORA DO RESPONSIVO) --- */
+/* --- WIDGET FLUTUANTE COPA 2026 --- */
 .copa-widget {
     position: fixed;
-    top: 130px;      /* 130px do topo (para ficar logo abaixo do menu) */
-    right: 20px;     /* 20px da direita */
+    top: 130px;     
+    right: 20px;    
     background: rgba(255, 255, 255, 0.95);
     padding: 10px 20px;
     border-radius: 50px;
