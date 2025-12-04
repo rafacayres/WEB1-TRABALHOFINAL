@@ -12,8 +12,8 @@ O site serve como uma fan-page interativa, aplicando conceitos fundamentais de H
 
 ## Informações Acadêmicas
 
-**Instituição:** [IFSP - Instituto Federal de São Paulo (Câmpus Campos do Jordão)](https://cpj.ifsp.edu.br/)
-**Curso:** Análise e Desenvolvimento de Sistemas
+**Instituição:** [IFSP - Instituto Federal de São Paulo (Câmpus Campos do Jordão)](https://cpj.ifsp.edu.br/) <br>
+**Curso:** Análise e Desenvolvimento de Sistemas <br>
 **Disciplina:** Desenvolvimento Web 1
 
 ---
