@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* --- FUNCIONALIDADE 2: VALIDAÇÃO DE FORMULÁRIO (Sobre) --- */
     const form = document.querySelector("form");
 
-    if (form) { // Só roda se existir um formulário na página
+    if (form) { 
         form.addEventListener("submit", (event) => {
             event.preventDefault(); // Impede o site de recarregar
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById("email").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
 
-            // Validação simples
+           
             if (nome === "" || email === "" || mensagem === "") {
                 alert("Por favor, preencha todos os campos!");
                 return;
@@ -41,10 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Sucesso
+           
             alert(`Obrigado, ${nome}! Sua mensagem foi enviada.`);
-            form.reset(); // Limpa os campos
-        });
+            form.reset(); // limpa os campos
     }
 });
 
