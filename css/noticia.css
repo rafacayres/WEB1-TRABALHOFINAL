@@ -13,10 +13,16 @@ header {
 main {
     color: white;
     background-size: 100% 100%;
-    padding-top: 100px; 
+    padding-top: 120px; /* Ajustei para não colar no topo */
     text-align: left;
-    padding-left: 100px;
-    padding-right: 180px;
+    
+    /* --- CORREÇÃO DE ALINHAMENTO --- */
+    width: 100%;
+    max-width: 1200px; /* Limite para não esticar demais */
+    margin: 0 auto;    /* Centraliza na tela */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
 }
 
 .data{
@@ -26,6 +32,10 @@ main {
 
 body{
     background: #160000;
+    /* Garante que o footer vá pro final se tiver pouco conteudo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1{
@@ -37,8 +47,6 @@ h2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 25px;
 }
-
-
 
 .container {
     margin: 0 auto;
@@ -120,22 +128,13 @@ nav a:hover {
     transform: scale(1.20); /* Efeito hover */
 }
 
-
-
 footer {
     background: rgb(1, 77, 255);
     text-align: center;
-    padding: 20px;
+    padding: 20px 0; /* Padding vertical apenas */
     color: white;
-    position: relative;
-    bottom: 0;
     width: 100%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin-top: auto; /* Empurra para baixo */
 }
 
 .menusobre {
@@ -151,7 +150,6 @@ body {
     text-shadow: rgb(0, 0, 0) 5px 5px 5px;
 }
 
-
 footer .social-icons {
     display: none;         
 }
@@ -160,7 +158,6 @@ footer .social-icons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 1200px;
     width: 100%;
     text-align: center;
 }
@@ -337,7 +334,6 @@ footer .social-icons {
         padding-left: 10px;
         padding-right: 10px;
     }
-
     
     .social-icons {
         display: none; 

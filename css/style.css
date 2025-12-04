@@ -1,4 +1,4 @@
-z@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -76,14 +76,17 @@ header {
 
 .menuresponsa, .escudoresponsa { display: none; }
 
-/* --- CONTEÚDO --- */
+/* --- CONTEÚDO (Corrigido para Centralizar) --- */
 main {
     padding-top: 160px;
     padding-bottom: 50px;
     text-align: center;
+    
+    /* Centralização */
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    width: 95%;
+    
     flex: 1;
 }
 
@@ -161,6 +164,7 @@ footer {
     text-align: center;
     padding: 40px 0;
     color: white;
+    width: 100%;
     margin-top: auto;
 }
 footer a { color: white; text-decoration: none; font-weight: bold; }
