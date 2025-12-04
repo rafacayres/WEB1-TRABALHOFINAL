@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const nome = document.getElementById("nome").value.trim();
             const email = document.getElementById("email").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
+            const idade = document.getElementById("idade").value.trim();
             
 /* --- FUNCIONALIDADE: NECESSIDADE DE TODOS OS CAMPOS PREENCHIDOS (Sobre) --- */
             
