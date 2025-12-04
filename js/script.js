@@ -72,18 +72,18 @@ const textoDisplay = document.getElementById('texto-jogador');
 
 // Lista de referências para números icônicos
 const referencias = {
-    1: "Paredão! Você é seguro como Taffarel e Alisson.",
-    2: "Lateral lendário! Tipo Cafu levantando a taça.",
+    1: " Você é seguro como Taffarel e Alisson.",
+    2: " Você é como o Cafu levantando a taça.",
     3: "Zagueiro de raça, estilo Lúcio ou Thiago Silva.",
-    4: "Xerife da zaga! Como Aldair ou David Luiz.",
+    4: "Xerife da zaga, como Aldair ou David Luiz.",
     5: "O cão de guarda no meio, estilo Mauro Silva.",
     6: "Lateral de classe mundial, como Roberto Carlos.",
-    7: "Habilidade pura! A camisa de Bebeto e Jairzinho.",
+    7: "A camisa de Bebeto e Jairzinho.",
     8: "Maestro do meio-campo, como Sócrates ou Kaká.",
-    9: "O Fenômeno! Matador como Ronaldo e Richarlison.",
-    10: "O REI! A camisa de Pelé, Rivaldo, Neymar e Ronaldinho.",
-    11: "Atacante veloz! Como Romário e Adriano Imperador.",
-    20: "Talento jovem! A camisa que Vini Jr usou no início.",
+    9: "O Fenômeno! Matador como Ronaldo.",
+    10: "A camisa de Pelé, Rivaldo, Neymar e Ronaldinho.",
+    11: "Como Romário e Adriano Imperador.",
+    20: "A camisa que Vini Jr usou no início.",
 };
 
 btnSortear.addEventListener('click', () => {
