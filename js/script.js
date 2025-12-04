@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const btnSortear = document.getElementById('btn-sortear');
-const areaResultado = document.getElementById('area-resultado');
-const numeroDisplay = document.getElementById('numero-camisa');
-const textoDisplay = document.getElementById('texto-jogador');
+    const areaResultado = document.getElementById('area-resultado');
+    const numeroDisplay = document.getElementById('numero-camisa');
+    const textoDisplay = document.getElementById('texto-jogador');
 
 // Lista de referências para números icônicos
 const referencias = {
