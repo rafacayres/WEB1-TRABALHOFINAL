@@ -64,4 +64,57 @@ document.addEventListener("DOMContentLoaded", () => {
             form.reset(); 
         });
     }
+
+    const btnSortear = document.getElementById('btn-sortear');
+const areaResultado = document.getElementById('area-resultado');
+const numeroDisplay = document.getElementById('numero-camisa');
+const textoDisplay = document.getElementById('texto-jogador');
+
+// Lista de referências para números icônicos
+const referencias = {
+    1: "Paredão! Você é seguro como Taffarel e Alisson.",
+    2: "Lateral lendário! Tipo Cafu levantando a taça.",
+    3: "Zagueiro de raça, estilo Lúcio ou Thiago Silva.",
+    4: "Xerife da zaga! Como Aldair ou David Luiz.",
+    5: "O cão de guarda no meio, estilo Mauro Silva.",
+    6: "Lateral de classe mundial, como Roberto Carlos.",
+    7: "Habilidade pura! A camisa de Bebeto e Jairzinho.",
+    8: "Maestro do meio-campo, como Sócrates ou Kaká.",
+    9: "O Fenômeno! Matador como Ronaldo e Richarlison.",
+    10: "O REI! A camisa de Pelé, Rivaldo, Neymar e Ronaldinho.",
+    11: "Atacante veloz! Como Romário e Adriano Imperador.",
+    20: "Talento jovem! A camisa que Vini Jr usou no início.",
+};
+
+btnSortear.addEventListener('click', () => {
+    // 1. Efeito visual de "carregando"
+    btnSortear.disabled = true;
+    btnSortear.innerText = "Sorteando...";
+    numeroDisplay.innerText = "";
+    textoDisplay.innerText = "";
+    
+    // Remove animação anterior para poder rodar de novo
+    areaResultado.classList.remove('fade-in');
+
+    // 2. Espera 600ms para dar suspense (setTimeout)
+    setTimeout(() => {
+        // Sorteia número entre 1 e 23
+        const numeroSorteado = Math.floor(Math.random() * 23) + 1;
+
+        // Atualiza o HTML
+        numeroDisplay.innerText = numeroSorteado;
+        
+        // Verifica se tem frase especial, senão usa uma genérica
+        if (referencias[numeroSorteado]) {
+            textoDisplay.innerText = referencias[numeroSorteado];
+        } else {
+            textoDisplay.innerText = "Você seria uma peça fundamental no elenco!";
+        }
+
+        // Adiciona classe de animação e libera o botão
+        areaResultado.classList.add('fade-in');
+        btnSortear.disabled = false;
+        btnSortear.innerText = "Sortear Novamente";
+    }, 600);
+});
 });
