@@ -22,28 +22,46 @@ document.addEventListener("DOMContentLoaded", () => {
     /* --- FUNCIONALIDADE 2: VALIDAÇÃO DE FORMULÁRIO (Sobre) --- */
     const form = document.querySelector("form");
 
-    if (form) { // Só roda se existir um formulário na página
+    if (form) { 
         form.addEventListener("submit", (event) => {
             event.preventDefault(); // Impede o site de recarregar
 
+            // 1. CAPTURA DOS DADOS
             const nome = document.getElementById("nome").value.trim();
             const email = document.getElementById("email").value.trim();
+            const idade = document.getElementById("idade").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
 
-            // Validação simples
-            if (nome === "" || email === "" || mensagem === "") {
+            // Verifica se algum campo está vazio
+            if (nome === "" || email === "" || mensagem === "" || idade === "") {
                 alert("Por favor, preencha todos os campos!");
                 return;
             }
 
+
+            const idadeNumero = parseInt(idade);
+
+            // Verifica se não é número OU se é menor que 16
+            if (isNaN(idadeNumero) || idadeNumero < 16) {
+                alert("É necessário ter pelo menos 16 anos para enviar a mensagem.");
+                return;
+            }
+            
+
+            if (idadeNumero > 120) {
+                 alert("Por favor, insira uma idade válida.");
+                 return;
+            }
+
+            // Verifica se tem @ e se tem ponto
             if (!email.includes("@") || !email.includes(".")) {
                 alert("Por favor, insira um e-mail válido.");
                 return;
             }
 
-            // Sucesso
-            alert(`Obrigado, ${nome}! Sua mensagem foi enviada.`);
-            form.reset(); // Limpa os campos
+            // --- SUCESSO ---
+            alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`);
+            form.reset(); 
         });
     }
 });
